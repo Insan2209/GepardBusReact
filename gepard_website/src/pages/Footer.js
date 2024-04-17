@@ -1,9 +1,12 @@
+import React from "react";
+//import ReactDOM from "react-dom/client";
+
 function Footer() {
     return (
     <>
         <div className="flex flex-wrap flex-col md:flex-row mt-36 items-center justify-between w-full bg-xanthous">
             <div className="flex justify-center items-center w-full">
-            <img src={require(".//png/gepard_logo.png")} alt="Gepard bus logo" />
+            <img src={require("//png/gepard_logo.png")} alt="Gepard bus logo" />
             </div>
             <div className="flex flex-wrap items-center justify-center w-full md:w-1/2 md:justify-end md:pr-10">
             <p className="text-xl font-semibold text-zinc-700 font-poppins">
@@ -11,7 +14,7 @@ function Footer() {
             </p>
             <a href="#">
                 <img
-                src={require(".//png/facebook_pomaranczowe.png")}
+                src={require("//png/facebook_pomaranczowe.png")}
                 className="w-10 h-10 ml-2"
                 alt="Facebook Logo"
                 />
@@ -23,7 +26,7 @@ function Footer() {
             </p>
             <a href="#">
                 <img
-                src={require(".//png/instagram_pomaranczowe.png")}
+                src={require("//png/instagram_pomaranczowe.png")}
                 className="w-10 h-10 ml-2"
                 alt="Instagram Logo"
                 />

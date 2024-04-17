@@ -1,4 +1,7 @@
-function App() {
+import React from "react";
+//import ReactDOM from "react-dom/client";
+
+function MainPage() {
   return (
     <>
       <div className="flex flex-wrap items-center justify-between mt-12 min-h-[25vw]">
@@ -37,11 +40,11 @@ function App() {
           </div>
         </div>
         <div className="w-full xl:w-1/2 flex items-center justify-center mt-36">
-          <img src={require(".//png/gepard_logo.png")} className="h-96 w-96" alt="??" />
+          <img src={require("//png/gepard_logo.png")} className="h-96 w-96" alt="??" />
         </div>
       </div>
     </>
   );
 }
 
-export default App;
+export default MainPage;

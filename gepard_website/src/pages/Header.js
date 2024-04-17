@@ -1,20 +1,26 @@
+import React from "react";
+//import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AboutUs from "./AboutUs";
+
 function Header() {
     return (
-        <>
+        <Router>
             <meta charSet="UTF-8" />
             <title>Gepard Bus</title>
             <meta name="viewport" content="width=device-width,initial-scale=1" />
-            <link rel="stylesheet" href=".//index.css" />
-            <link rel="icon" type="image/x-icon" href="../png/favicon.png" />
+            <link rel="stylesheet" href="//index.css" />
+            <link rel="icon" type="image/x-icon" href="//png/gepard_logo.png" />
+            <Routes>
             <nav className="bg-slate-100">
                 <div className="flex flex-wrap items-center justify-between mx-auto p-2 xl:justify-center 2xl:justify-between">
-                <a href="index.html">
+                <Route path='aboutus' element={<AboutUs />}>
                     <img
-                    src={require(".//png/gepard_logo.png")}
+                    src={require("//png/gepard_logo.png")}
                     className="h-24"
                     alt="Gepard Bus Logo"
                     />
-                </a>
+                </Route>
                 <button
                     id="toggleBtn"
                     data-collapse-toggle="navbar-default"
@@ -47,11 +53,11 @@ function Header() {
                     <ul className="font-medium flex flex-col xl:flex-row p-4 space-y-4 xl:space-x-8 xl:space-y-0">
                     <li className="flex items-center">
                         <a
-                        href="about_us.html"
+                        href="#"
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
-                            src={require(".//png/ofirmie_pomaranczowe.png")}
+                            src={require("//png/ofirmie_pomaranczowe.png")}
                             className="w-6 h-6 mr-2"
                             alt="Ikona Firma"
                         />
@@ -64,7 +70,7 @@ function Header() {
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
-                            src={require(".//png/rozklad_pomaranczowe.png")}
+                            src={require("//png/rozklad_pomaranczowe.png")}
                             className="w-6 h-6 mr-2"
                             alt="Ikona Rozkład"
                         />
@@ -77,7 +83,7 @@ function Header() {
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
-                            src={require(".//png/zaloga_pomaranczowe.png")}
+                            src={require("//png/zaloga_pomaranczowe.png")}
                             className="w-6 h-6 mr-2"
                             alt="Ikona Załoga"
                         />
@@ -90,7 +96,7 @@ function Header() {
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
-                            src={require(".//png/bilety_pomaranczowe.png")}
+                            src={require("//png/bilety_pomaranczowe.png")}
                             className="w-6 h-6 mr-2"
                             alt="Ikona Bilety"
                         />
@@ -103,7 +109,7 @@ function Header() {
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
-                            src={require(".//png/aktualnosci_pomaranczowe.png")}
+                            src={require("//png/aktualnosci_pomaranczowe.png")}
                             className="w-6 h-6 mr-2"
                             alt="Ikona Aktualności"
                         />
@@ -116,7 +122,7 @@ function Header() {
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
-                            src={require(".//png/kontakt_pomaranczowe.png")}
+                            src={require("//png/kontakt_pomaranczowe.png")}
                             className="w-6 h-6 mr-2"
                             alt="Ikona Kontakt"
                         />
@@ -129,7 +135,7 @@ function Header() {
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
-                            src={require(".//png/regulamin_pomaranczowe.png")}
+                            src={require("//png/regulamin_pomaranczowe.png")}
                             className="w-6 h-6 mr-2"
                             alt="Ikona Regulamin"
                         />
@@ -140,7 +146,8 @@ function Header() {
                 </div>
                 </div>
             </nav>
-        </>
+            </Routes>
+        </Router>
     );
 }
 
