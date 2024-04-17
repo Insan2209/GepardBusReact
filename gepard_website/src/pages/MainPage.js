@@ -40,7 +40,7 @@ function MainPage() {
           </div>
         </div>
         <div className="w-full xl:w-1/2 flex items-center justify-center mt-36">
-          <img src={require("//png/gepard_logo.png")} className="h-96 w-96" alt="??" />
+          <img src="/png/gepard_logo.png" className="h-96 w-96" alt="??" />
         </div>
       </div>
     </>
