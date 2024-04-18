@@ -31,6 +31,7 @@ function Footer() {
                 alt="Instagram Logo"
                 />
             </a>
+            //Test2
             </div>
             <div className="flex flex-wrap items-center justify-center w-full mt-12 md:mt-2">
             <p className="text-sm text-zinc-700 font-poppins">
