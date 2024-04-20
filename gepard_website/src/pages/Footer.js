@@ -1,5 +1,4 @@
 import React from "react";
-//import ReactDOM from "react-dom/client";
 
 function Footer() {
     return (
@@ -12,7 +11,7 @@ function Footer() {
             <p className="text-xl font-semibold text-zinc-700 font-poppins">
                 Wpadnij na naszego Facebooka
             </p>
-            <a href="#">
+            <a href="https://www.google.com" target="_blank" rel="noreferrer">
                 <img
                 src="/png/facebook_pomaranczowe.png"
                 className="w-10 h-10 ml-2"
@@ -24,14 +23,13 @@ function Footer() {
             <p className="text-xl font-semibold text-zinc-700 font-poppins">
                 Odwiedź nas na Instagramie
             </p>
-            <a href="#">
+            <a href="https://www.google.com" target="_blank" rel="noreferrer">
                 <img
                 src="/png/instagram_pomaranczowe.png"
                 className="w-10 h-10 ml-2"
                 alt="Instagram Logo"
                 />
             </a>
-            //Test2
             </div>
             <div className="flex flex-wrap items-center justify-center w-full mt-12 md:mt-2">
             <p className="text-sm text-zinc-700 font-poppins">

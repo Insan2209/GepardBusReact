@@ -1,7 +1,5 @@
 import React from "react";
-//import ReactDOM from "react-dom/client";
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AboutUs from "./AboutUs";
+import { Link, } from "react-router-dom";
 
 function Header() {
     return (
@@ -11,15 +9,15 @@ function Header() {
             <meta name="viewport" content="width=device-width,initial-scale=1" />
             <link rel="stylesheet" href="//index.css" />
             <link rel="icon" type="image/x-icon" href="//png/gepard_logo.png" />
-            <nav className="bg-slate-100">
+            <nav className="bg-slate-50">
                 <div className="flex flex-wrap items-center justify-between mx-auto p-2 xl:justify-center 2xl:justify-between">
-                    <a href="#">
+                    <Link to ="/">
                     <img
                     src="/png/gepard_logo.png"
                     className="h-24"
                     alt="Gepard Bus Logo"
                     />
-                    </a>
+                    </Link>
                 <button
                     id="toggleBtn"
                     data-collapse-toggle="navbar-default"
@@ -51,8 +49,8 @@ function Header() {
                 >
                     <ul className="font-medium flex flex-col xl:flex-row p-4 space-y-4 xl:space-x-8 xl:space-y-0">
                     <li className="flex items-center">
-                        <a
-                        href="#"
+                        <Link
+                        to ="/AboutUs"
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
@@ -61,11 +59,11 @@ function Header() {
                             alt="Ikona Firma"
                         />
                         O firmie
-                        </a>
+                        </Link>
                     </li>
                     <li className="flex items-center">
-                        <a
-                        href="#"
+                        <Link
+                        to ="/Schedule"
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
@@ -74,11 +72,11 @@ function Header() {
                             alt="Ikona Rozkład"
                         />
                         Rozkład jazdy
-                        </a>
+                        </Link>
                     </li>
                     <li className="flex items-center">
-                        <a
-                        href="#"
+                        <Link
+                        to ="/OurCrew" 
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
@@ -87,11 +85,11 @@ function Header() {
                             alt="Ikona Załoga"
                         />
                         Nasza załoga
-                        </a>
+                        </Link>
                     </li>
                     <li className="flex items-center">
-                        <a
-                        href="#"
+                        <Link
+                        to ="/Tickets"
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
@@ -100,11 +98,11 @@ function Header() {
                             alt="Ikona Bilety"
                         />
                         Rezerwacja biletów
-                        </a>
+                        </Link>
                     </li>
                     <li className="flex items-center">
-                        <a
-                        href="#"
+                        <Link
+                        to ="/News"
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
@@ -113,11 +111,11 @@ function Header() {
                             alt="Ikona Aktualności"
                         />
                         Aktualności
-                        </a>
+                        </Link>
                     </li>
                     <li className="flex items-center">
-                        <a
-                        href="#"
+                        <Link
+                        to ="/Contact"
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
@@ -126,11 +124,11 @@ function Header() {
                             alt="Ikona Kontakt"
                         />
                         Kontakt
-                        </a>
+                        </Link>
                     </li>
                     <li className="flex items-center">
-                        <a
-                        href="#"
+                        <Link
+                        to ="/TermsAndConditions"
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
                         <img
@@ -139,7 +137,7 @@ function Header() {
                             alt="Ikona Regulamin"
                         />
                         Regulamin
-                        </a>
+                        </Link>
                     </li>
                     </ul>
                 </div>
