@@ -3,12 +3,12 @@ import React from "react";
 function Footer() {
     return (
     <>
-        <div className="flex flex-wrap flex-col md:flex-row mt-36 items-center justify-between w-full bg-xanthous">
+        <div className="flex flex-wrap flex-col md:flex-row mt-24 md:mt-36 items-center justify-between w-full bg-xanthous">
             <div className="flex justify-center items-center w-full">
             <img src="/png/gepard_logo.png" alt="Gepard bus logo" />
             </div>
             <div className="flex flex-wrap items-center justify-center w-full md:w-1/2 md:justify-end md:pr-10">
-            <p className="text-xl font-semibold text-zinc-700 font-poppins">
+            <p className="text-lg font-semibold text-zinc-700 font-poppins">
                 Wpadnij na naszego Facebooka
             </p>
             <a href="https://www.google.com" target="_blank" rel="noreferrer">
@@ -20,7 +20,7 @@ function Footer() {
             </a>
             </div>
             <div className="flex flex-wrap items-center justify-center w-full md:w-1/2 md:justify-start md:pl-10">
-            <p className="text-xl font-semibold text-zinc-700 font-poppins">
+            <p className="text-lg font-semibold text-zinc-700 font-poppins">
                 Odwiedź nas na Instagramie
             </p>
             <a href="https://www.google.com" target="_blank" rel="noreferrer">

@@ -1,7 +1,27 @@
-import React from "react";
-import { Link, } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation, } from "react-router-dom";
 
 function Header() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const closeMenu = () => {
+            const navbar = document.getElementById('navbar-default');
+            if (navbar) {
+                navbar.classList.add('hidden');
+            }
+        };
+
+        closeMenu();
+    }, [location]);
+
+    const handleToggleMenu = () => {
+        const navbar = document.getElementById('navbar-default');
+        navbar.classList.toggle('hidden');
+    };
+
+
     return (
         <>
             <meta charSet="UTF-8" />
@@ -20,8 +40,7 @@ function Header() {
                     </Link>
                 <button
                     id="toggleBtn"
-                    data-collapse-toggle="navbar-default"
-                    type="button"
+                    onClick={handleToggleMenu}
                     className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-20"
                     aria-controls="navbar-default"
                     aria-expanded="false"
