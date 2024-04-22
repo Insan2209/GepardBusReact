@@ -108,19 +108,6 @@ function Header() {
                     </li>
                     <li className="flex items-center">
                         <Link
-                        to ="/Tickets"
-                        className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
-                        >
-                        <img
-                            src="/png/bilety_pomaranczowe.png"
-                            className="w-6 h-6 mr-2"
-                            alt="Ikona Bilety"
-                        />
-                        Rezerwacja biletów
-                        </Link>
-                    </li>
-                    <li className="flex items-center">
-                        <Link
                         to ="/News"
                         className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                         >
