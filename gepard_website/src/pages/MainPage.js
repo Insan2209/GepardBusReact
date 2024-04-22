@@ -3,7 +3,7 @@ import React from "react";
 function MainPage() {
   return (
     <>
-      <div className="flex flex-wrap items-center justify-between mt-12 min-h-[25vw]">
+      <div className="flex flex-wrap items-center justify-between mt-12 xl:mt-0 min-h-[25vw]">
         <div className="w-full xl:w-1/2">
           <div className="items-center justify-between mx-4 xl:ml-24 xl:mt-36">
             <p className="text-3xl xl:text-6xl font-bold text-zinc-700 font-poppins">
@@ -38,8 +38,8 @@ function MainPage() {
             </div>
           </div>
         </div>
-        <div className="w-full xl:w-1/2 flex items-center justify-center mt-36">
-          <img src="/png/gepard_logo.png" className="h-96 w-96" alt="??" />
+        <div className=" hidden xl:flex w-full xl:w-1/2 items-center justify-center mt-36">
+          <img src="/png/bus.png" className="h-full" alt="bus" />
         </div>
       </div>
     </>
