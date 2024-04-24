@@ -36,7 +36,7 @@ function OurCrew () {
                 <p className="text-md md:text-lg text-zinc-700 font-poppins">Rzetelny i zaangażowany profesjonalista, który ceni sobie zadowolenie pasażerów. Charakteryzuje go uprzejmość i doskonała znajomość tras.</p>
             </div>
         </div>
-        <p className="text-2xl md:text-4xl font-semibold text-zinc-700 font-poppins mt-20 text-center">Masz jakieś <span className="text-princeton_orange">pytania</span> lub chcesz złożyć <span className="text-princeton_orange">skargę</span>? Zapraszamy do zakładki Kontakt</p>
+        <p className="text-2xl md:text-4xl font-semibold text-zinc-700 font-poppins my-20 text-center">Masz jakieś <span className="text-princeton_orange">pytania</span> lub chcesz złożyć <span className="text-princeton_orange">skargę</span>? Zapraszamy do zakładki Kontakt</p>
     </>
     );
 }

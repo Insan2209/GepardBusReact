@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
     return (
     <>
-        <div className="flex flex-wrap flex-col md:flex-row mt-24 md:mt-36 items-center justify-between w-full bg-xanthous">
+        <div className="flex flex-wrap flex-col md:flex-row md:mt-auto items-center justify-between w-full bg-xanthous">
             <div className="flex justify-center items-center w-full">
             <img src="/png/gepard_logo.png" alt="Gepard bus logo" />
             </div>

@@ -3,7 +3,7 @@ import React from "react";
 function Schedule () {
     return (
     <>
-        <div className="flex flex-wrap justify-center mt-12 md:mt-24 min-h-[85vw] xl:min-h-[25vw]">
+        <div className="flex flex-wrap justify-center my-12 md:mt-24 min-h-[85vw] xl:min-h-[25vw]">
             <div className="w-full xl:w-1/2 block space-y-10 text-center justify-center">
                 <p className="text-4xl md:text-6xl font-bold text-zinc-700 font-poppins mb-16 xl:mb-24">
                     Wybierz trasę:

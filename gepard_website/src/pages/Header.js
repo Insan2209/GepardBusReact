@@ -24,11 +24,6 @@ function Header() {
 
     return (
         <>
-            <meta charSet="UTF-8" />
-            <title>Gepard Bus</title>
-            <meta name="viewport" content="width=device-width,initial-scale=1" />
-            <link rel="stylesheet" href="//index.css" />
-            <link rel="icon" type="image/x-icon" href="//png/gepard_logo.png" />
             <nav className="bg-slate-50">
                 <div className="flex flex-wrap items-center justify-between mx-auto p-2 xl:justify-center 2xl:justify-between">
                     <Link to ="/">

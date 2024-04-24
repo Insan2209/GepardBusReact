@@ -3,14 +3,14 @@ import React from "react";
 function MainPage() {
   return (
     <>
-      <div className="flex flex-wrap items-center justify-between mt-12 xl:mt-0 min-h-[25vw]">
+      <div className="flex flex-wrap items-center justify-between my-12 xl:my-auto">
         <div className="w-full xl:w-1/2">
-          <div className="items-center justify-between mx-4 xl:ml-24 xl:mt-36">
+          <div className="items-center justify-between mx-4 xl:ml-24">
             <p className="text-3xl xl:text-6xl font-bold text-zinc-700 font-poppins">
               Gepard: Szybko, Pewnie, Wygodnie -{" "}
               <span className="text-cocoa_brown">Zawsze!</span>
             </p>
-            <p className="text-justify text-lg xl:text-2xl text-zinc-700 font-poppins mt-8">
+            <p className="text-lg xl:text-2xl text-zinc-700 font-poppins mt-8">
               Zapraszamy do skorzystania z naszych usług transportowych, gdzie
               szybkość, pewność i wygoda to nasze kluczowe wartości. Niezależnie
               od celu podróży, Gepard zapewnia niezawodne połączenia, które
@@ -38,7 +38,7 @@ function MainPage() {
             </div>
           </div>
         </div>
-        <div className=" hidden xl:flex w-full xl:w-1/2 items-center justify-center mt-36">
+        <div className=" hidden xl:flex w-full xl:w-1/2 items-center justify-center">
           <img src="/png/bus.png" className="h-full" alt="bus" />
         </div>
       </div>
