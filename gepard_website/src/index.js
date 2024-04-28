@@ -10,9 +10,11 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
+      <div class="flex flex-col min-h-screen">
       <Header />
       <Content />
       <Footer />
+      </div>
     </BrowserRouter>,
 );
 
