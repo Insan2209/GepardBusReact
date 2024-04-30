@@ -114,7 +114,7 @@ function News () {
                         expandedButtonId === 3 ? 'opacity-100 translate-x-28' : 'opacity-0 translate-x-0'
                     }`}
                 >
-                    <p className="text-2xl md:text-4xl font-semibold text-zinc-700 font-poppins text-left">Tekst3</p>
+                    <p className="text-2xl md:text-4xl font-semibold text-zinc-700 font-poppins text-left">Tekst33</p>
                     
                 </div>
             </div>
