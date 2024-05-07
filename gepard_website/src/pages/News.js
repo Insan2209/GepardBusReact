@@ -5,13 +5,10 @@ function News () {
 
     const [expandedButtonId, setExpandedButtonId] = useState(null);
 
-    // Funkcja do przełączania przycisku
     const toggleExpansion = (buttonId) => {
         if (expandedButtonId === buttonId) {
-            // Jeśli kliknięto już rozwinięty przycisk, zamknij go
             setExpandedButtonId(null);
         } else {
-            // W przeciwnym razie otwórz nowy przycisk i zamknij wcześniejszy
             setExpandedButtonId(buttonId);
         }
     };

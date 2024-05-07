@@ -3,7 +3,7 @@ import React from "react";
 function AboutUs () {
     return (
     <>
-        <div className="flex flex-wrap items-center justify-between my-12 xl:my-12">
+        <div className="flex flex-wrap items-center justify-between my-12 xl:my-auto">
             <div className="hidden w-full xl:w-1/2 md:flex items-center justify-center">
                 <img src="/png/bus.png" className="h-max" alt="niewiemco"/>
             </div>

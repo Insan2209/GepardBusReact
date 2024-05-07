@@ -3,7 +3,9 @@ import React from "react";
 function Contact () {
     return (
     <>
-        <p>Contact</p>
+        <div className="flex flex-wrap items-center justify-between my-12 xl:my-auto">
+            
+        </div>
     </>
     );
 }
