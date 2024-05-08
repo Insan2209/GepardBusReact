@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Transition } from '@headlessui/react'
+import { motion } from "framer-motion"
 
 function News () {
 
@@ -38,8 +38,7 @@ function News () {
                     </div>
                     <hr class="h-px w-full my-2 bg-selective_yellow border-0 block"></hr>
                 </div>
-
-                <div className="flex flex-wrap w-full md:w-2/3 px-0 md:py-10">
+                <motion.div className="flex flex-wrap w-full md:w-2/3 px-0 md:py-10">
                     <div className="md:mr-36">
                         <p className="text-2xl md:text-4xl font-semibold text-zinc-700 font-poppins text-left">Bilety miesięczne na miesiąc <span className="text-cocoa_brown">maj 2024</span></p>
                         <p className="text-lg md:text-2xl font-semibold text-zinc-700 font-poppins text-left mt-8 mb-2">Zakup biletów odbędzie się na dworcu PKP w lokalu 2.06 w dniach:</p>
@@ -55,8 +54,7 @@ function News () {
                         </ul>
                         <p className="text-md md:text-lg text-zinc-700 font-poppins text-left mt-8 mb-2">Informujemy iż sprzedaż biletów miesięcznych na maj 2024 na trasie Więcki-Popów-Kłobuck odbędzie sie tylko w dniach 29.04.2024 - 06.05.2024. Chcąc zakupić bilet miesięczny w innym terminie należy przyjechać do punktu sprzedaży na Dworcu PKP lok.2.06 w Częstochowie lub na portiernię w Liceum w Pajęcznie.</p>
                     </div>
-                </div>
-
+                </motion.div>
                 {/*
                 <div className="md:w-1/3">
                     <div className="flex flex-row items-center w-full justify-between">
