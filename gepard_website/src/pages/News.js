@@ -14,10 +14,9 @@ function News () {
     };
 
     return (
-        <div className="flex flex-wrap justify-between w-full my-12 xl:my-auto">
-            <div className="flex flex-wrap flex-col space-y-12 xl:space-y-28 justify-start my-auto px-8 xl:py-12 w-full xl:relative">
-                <div className="flex flex-wrap justify-between w-full xl:my-auto">
-                    <div className="w-full xl:w-1/3 h-min">
+        <div className="flex flex-wrap justify-between w-full my-12 xl:my-auto bg-red-100">
+            <div className="grid grid-rows-4 grid-cols-3 grid-flow-row gap-4 justify-start my-auto px-8 w-full xl:relative min-h-[30vw]">
+                    <div className="col-start-1 col-end-2 row-start-1 row-end-2 bg-red-200 w-full h-min">
                         <div className="flex flex-row items-center w-full justify-between">
                             <p className="text-2xl xl:text-4xl font-bold text-zinc-700 font-poppins text-left w-full">Bilety miesięczne</p>
                             <div className="min-w-fit">
@@ -45,7 +44,7 @@ function News () {
                         {expandedButtonId === 1 && (
                             <motion.div
                                 key="content"
-                                className="flex flex-wrap w-full xl:w-2/3 px-0 xl:absolute xl:right-0 xl:top-12 bg-red-300"
+                                className="col-start-2 col-end-4 row-start-1 row-end-5 bg-red-300 w-full px-0"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 100 }}
                                 exit={{ height: 0, opacity: 0 }}
@@ -69,10 +68,8 @@ function News () {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                </div>
                 
-                <div className="flex flex-wrap justify-between w-full xl:my-auto">
-                    <div className="w-full xl:w-1/3 h-min static">
+                    <div className="col-start-1 col-end-2 row-start-3 row-end-3 bg-blue-200 w-full h-min">
                         <div className="flex flex-row items-center w-full justify-between">
                             <p className="text-2xl xl:text-4xl font-bold text-zinc-700 font-poppins text-left w-full">Nowości</p>
                             <div className="min-w-fit">
@@ -99,7 +96,7 @@ function News () {
                         {expandedButtonId === 2 && (
                             <motion.div
                                 key="content"
-                                className="flex flex-wrap w-full xl:w-2/3 px-0 xl:absolute xl:right-0 xl:top-12"
+                                className="col-start-2 col-end-4 row-start-1 row-end-5 bg-blue-300 w-full px-0 xl:right-0 xl:top-12"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 100 }}
                                 exit={{ height: 0, opacity: 0 }}
@@ -114,10 +111,8 @@ function News () {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                </div>
 
-                <div className="flex flex-wrap justify-between w-full xl:my-auto">
-                    <div className="w-full xl:w-1/3 h-min">
+                    <div className="col-start-1 col-end-2 row-start-5 row-end-5 bg-green-200 w-full h-min">
                         <div className="flex flex-row items-center w-full justify-between">
                             <p className="text-2xl xl:text-4xl font-bold text-zinc-700 font-poppins text-left w-4/5">Zorganizowane grupy, wycieczki</p>
                             <div className="min-w-fit">
@@ -144,7 +139,7 @@ function News () {
                         {expandedButtonId === 3 && (
                             <motion.div
                                 key="content"
-                                className="flex flex-wrap w-full xl:w-2/3 px-0 xl:absolute xl:right-0 xl:top-12"
+                                className="col-start-2 col-end-4 row-start-1 row-end-5 bg-green-300 w-full px-0 xl:right-0 xl:top-12"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 100 }}
                                 exit={{ height: 0, opacity: 0 }}
@@ -159,7 +154,6 @@ function News () {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                </div>
             </div>
         </div>
     );
