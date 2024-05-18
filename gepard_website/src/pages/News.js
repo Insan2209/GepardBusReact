@@ -14,9 +14,9 @@ function News () {
     };
 
     return (
-        <div className="flex flex-wrap justify-between w-full my-12 xl:my-auto bg-red-100">
-            <div className="grid grid-rows-4 grid-cols-3 grid-flow-row gap-4 justify-start my-auto px-8 w-full xl:relative min-h-[30vw]">
-                    <div className="col-start-1 col-end-2 row-start-1 row-end-2 bg-red-200 w-full h-min">
+        <div className="flex flex-wrap justify-between w-full my-12 xl:my-auto">
+            <div className="grid grid-flow-row grid-cols-1 xl:grid-rows-7 xl:grid-cols-3 gap-5 3xl:gap-16 justify-start my-auto px-8 w-full xl:relative">
+                    <div className="xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-3 w-full h-min">
                         <div className="flex flex-row items-center w-full justify-between">
                             <p className="text-2xl xl:text-4xl font-bold text-zinc-700 font-poppins text-left w-full">Bilety miesięczne</p>
                             <div className="min-w-fit">
@@ -44,7 +44,7 @@ function News () {
                         {expandedButtonId === 1 && (
                             <motion.div
                                 key="content"
-                                className="col-start-2 col-end-4 row-start-1 row-end-5 bg-red-300 w-full px-0"
+                                className="xl:col-start-2 xl:col-end-4 xl:row-start-2 xl:row-end-8 w-full px-0"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 100 }}
                                 exit={{ height: 0, opacity: 0 }}
@@ -69,7 +69,7 @@ function News () {
                         )}
                     </AnimatePresence>
                 
-                    <div className="col-start-1 col-end-2 row-start-3 row-end-3 bg-blue-200 w-full h-min">
+                    <div className="xl:col-start-1 xl:col-end-2 xl:row-start-4 xl:row-end-5 w-full h-min">
                         <div className="flex flex-row items-center w-full justify-between">
                             <p className="text-2xl xl:text-4xl font-bold text-zinc-700 font-poppins text-left w-full">Nowości</p>
                             <div className="min-w-fit">
@@ -96,7 +96,7 @@ function News () {
                         {expandedButtonId === 2 && (
                             <motion.div
                                 key="content"
-                                className="col-start-2 col-end-4 row-start-1 row-end-5 bg-blue-300 w-full px-0 xl:right-0 xl:top-12"
+                                className="xl:col-start-2 xl:col-end-4 xl:row-start-2 xl:row-end-8 w-full px-0 xl:right-0 xl:top-12"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 100 }}
                                 exit={{ height: 0, opacity: 0 }}
@@ -112,7 +112,7 @@ function News () {
                         )}
                     </AnimatePresence>
 
-                    <div className="col-start-1 col-end-2 row-start-5 row-end-5 bg-green-200 w-full h-min">
+                    <div className="xl:col-start-1 xl:col-end-2 xl:row-start-6 xl:row-end-7 w-full h-min">
                         <div className="flex flex-row items-center w-full justify-between">
                             <p className="text-2xl xl:text-4xl font-bold text-zinc-700 font-poppins text-left w-4/5">Zorganizowane grupy, wycieczki</p>
                             <div className="min-w-fit">
@@ -139,7 +139,7 @@ function News () {
                         {expandedButtonId === 3 && (
                             <motion.div
                                 key="content"
-                                className="col-start-2 col-end-4 row-start-1 row-end-5 bg-green-300 w-full px-0 xl:right-0 xl:top-12"
+                                className="xl:col-start-2 xl:col-end-4 xl:row-start-2 xl:row-end-8 w-full px-0 xl:right-0 xl:top-12"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 100 }}
                                 exit={{ height: 0, opacity: 0 }}

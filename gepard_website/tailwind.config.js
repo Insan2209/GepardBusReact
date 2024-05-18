@@ -3,17 +3,23 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
+      colors: 
+      {
         tawny: "#CC5803",
         cocoa_brown: "#E2711D",
         princeton_orange: "#FF9505",
         selective_yellow: "#FFB627",
         xanthous: "#FFC971",
       },
-      fontFamily: {
+      fontFamily: 
+      {
         poppins: ['"Poppins"', "sans-serif"],
         archivo_black: ['"Grandstander"', "sans-serif"],
       },
+      screens:
+      {
+        '3xl': '2300px'
+      }
     },
   },
   plugins: [],
