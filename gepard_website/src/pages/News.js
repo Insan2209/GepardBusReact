@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useMediaQuery } from '@mui/material';
 
 function News () {
 
@@ -13,9 +14,40 @@ function News () {
         }
     };
 
+    const isSmall = useMediaQuery("(max-width:1279px)");
+
+    const variants = isSmall ?
+    {
+        Animate: 
+        {
+            height: "auto",
+            opacity: 100,
+        },
+        InitialAndExit:
+        {
+            height: 0,
+            opacity: 0,
+        }
+    }
+    :
+    {
+        Animate: 
+        {
+            height: "auto",
+            opacity: 100,
+            x: 80,
+        },
+        InitialAndExit:
+        {
+            height: 0,
+            opacity: 0,
+            x: 0,
+        }
+    };
+
     return (
         <div className="flex flex-wrap justify-between w-full my-12 xl:my-auto">
-            <div className="grid grid-flow-row grid-cols-1 xl:grid-rows-7 xl:grid-cols-3 gap-5 3xl:gap-16 justify-start my-auto px-8 w-full xl:relative">
+            <div className="grid grid-flow-row grid-cols-1 xl:grid-rows-7 xl:grid-cols-3 gap-5 3xl:gap-16 justify-start my-auto px-8 w-full xl:relative overflow-x-hidden">
                     <div className="xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-3 w-full h-min">
                         <div className="flex flex-row items-center w-full justify-between">
                             <p className="text-2xl xl:text-4xl font-bold text-zinc-700 font-poppins text-left w-full">Bilety miesięczne</p>
@@ -45,12 +77,13 @@ function News () {
                             <motion.div
                                 key="content"
                                 className="xl:col-start-2 xl:col-end-4 xl:row-start-2 xl:row-end-8 w-full px-0"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 100 }}
-                                exit={{ height: 0, opacity: 0 }}
+                                variants={variants}
+                                initial={variants.InitialAndExit}
+                                animate={variants.Animate}
+                                exit={variants.InitialAndExit}
                                 transition={{ duration: 0.5 }}
                             >
-                                <div className="xl:mr-36 mt-6 xl:mt-0">
+                                <div className="xl:mr-20 mt-6 xl:mt-0">
                                     <p className="text-2xl 2xl:text-4xl font-semibold text-zinc-700 font-poppins text-left">Bilety miesięczne na miesiąc <span className="text-cocoa_brown">maj 2024</span></p>
                                     <p className="text-lg 2xl:text-2xl font-semibold text-zinc-700 font-poppins text-left mt-8 mb-2">Zakup biletów odbędzie się na dworcu PKP w lokalu 2.06 w dniach:</p>
                                     <ul className="text-md 2xl:text-xl list-disc list-inside text-zinc-700">
@@ -97,9 +130,10 @@ function News () {
                             <motion.div
                                 key="content"
                                 className="xl:col-start-2 xl:col-end-4 xl:row-start-2 xl:row-end-8 w-full px-0 xl:right-0 xl:top-12"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 100 }}
-                                exit={{ height: 0, opacity: 0 }}
+                                variants={variants}
+                                initial={variants.InitialAndExit}
+                                animate={variants.Animate}
+                                exit={variants.InitialAndExit}
                                 transition={{ duration: 0.5 }}
                             >
                                 <div className="xl:mr-36 mt-6 xl:mt-0">
@@ -140,9 +174,10 @@ function News () {
                             <motion.div
                                 key="content"
                                 className="xl:col-start-2 xl:col-end-4 xl:row-start-2 xl:row-end-8 w-full px-0 xl:right-0 xl:top-12"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 100 }}
-                                exit={{ height: 0, opacity: 0 }}
+                                variants={variants}
+                                initial={variants.InitialAndExit}
+                                animate={variants.Animate}
+                                exit={variants.InitialAndExit}
                                 transition={{ duration: 0.5 }}
                             >
                                 <div className="xl:mr-36 mt-6 xl:mt-0">
