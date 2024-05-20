@@ -96,7 +96,7 @@ function News () {
                                         <li>26.04.2024 <span className="text-cocoa_brown">(piątek)</span> w godzinach 10:00 - 13:30</li>
                                         <li>14.05.2024 <span className="text-cocoa_brown">(wtorek)</span> w godzinach 10:30 - 13:00</li>
                                     </ul>
-                                    <p className="text-md 2xl:text-lg text-zinc-700 font-poppins text-left mt-8 mb-2">Informujemy iż sprzedaż biletów miesięcznych na maj 2024 na trasie Więcki-Popów-Kłobuck odbędzie sie tylko w dniach 29.04.2024 - 06.05.2024. Chcąc zakupić bilet miesięczny w innym terminie należy przyjechać do punktu sprzedaży na Dworcu PKP lok.2.06 w Częstochowie lub na portiernię w Liceum w Pajęcznie.</p>
+                                    <p className="text-md 2xl:text-lg text-zinc-700 font-poppins text-left mt-8 mb-2">Informujemy iż sprzedaż biletów miesięcznych na maj 2024 na trasie Więcki-Popów-Kłobuck odbędzie sie tylko w dniach 29.04.2024 - 06.05.2024. Chcąc zakupić bilet miesięczny w innym terminie należy udać się do punktu sprzedaży na Dworcu PKP lok.2.06 w Częstochowie lub na portiernię w Liceum w Pajęcznie.</p>
                                 </div>
                             </motion.div>
                         )}

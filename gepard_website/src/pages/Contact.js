@@ -3,13 +3,15 @@ import React from "react";
 function Contact () {
     return (
     <>
-        <div className="grid grid-rows-3 grid-cols-3 grid-flow-row gap-4 bg-yellow-200">
-            <div className="col-start-1 col-end-1 row-start-1 row-end-1 bg-red-200">Div z numerem 1</div>
-            <div className="col-start-2 col-end-4 row-start-1 row-end-4 bg-red-300">Div z numerem 2</div>
-            <div className="col-start-1 col-end-1 row-start-2 row-end-2 bg-blue-200">Div z numerem 3</div>
-            <div className="col-start-2 col-end-4 row-start-1 row-end-4 bg-blue-300">Div z numerem 4</div>
-            <div className="col-start-1 col-end-1 row-start-3 row-end-3 bg-green-200">Div z numerem 5</div>
-            <div className="col-start-2 col-end-4 row-start-1 row-end-4 bg-green-300">Div z numerem 6</div>
+        <div className="flex flex-wrap justify-center my-12 mx-2 xl:min-h-[25vw]">
+            <div className="w-full xl:w-3/5 block space-y-8 text-center justify-center">
+                <p className="text-2xl xl:text-4xl font-semibold text-zinc-700 font-poppins">Masz jakieś <span className="text-cocoa_brown">skargi</span> lub <span className="text-cocoa_brown">uwagi</span>? Chciałbyś zadać nam <span className="text-cocoa_brown">pytanie</span>? A może podzielić się z nami swoim <span className="text-cocoa_brown">pomysłem</span>?</p>
+                <p className="text-xl xl:text-3xl text-zinc-700 font-poppins">Skontaktuj się z nami! Z chęcią wysłuchamy sugestii odnośnie połączeń, rozkładu i jego szczegółów.</p>
+                <p className="text-lg xl:text-xl text-zinc-700 font-poppins">E-mail: <span className="text-cocoa_brown font-semibold">gepardbus@interia.pl</span></p>
+                <p className="text-lg xl:text-xl text-zinc-700 font-poppins">Telefon: <span className="text-cocoa_brown font-semibold">502 593 761</span></p>
+                <p className="text-lg xl:text-xl text-zinc-700 font-poppins">Adres korespondencyjny: <span className="text-cocoa_brown font-semibold">F.H.U. „GEPARD” Grzegorz Latkowski <br/>Ul. Sitkówka 124a 26-060 Chęciny</span></p>  
+                <p className="text-lg xl:text-xl text-zinc-700 font-poppins">Jesteśmy dla was dostępni w godzinach: <span className="text-cocoa_brown font-semibold"><br/>Poniedziałek - Piątek:</span><span className="font-semibold"> 8:00 - 18:00</span><span className="text-cocoa_brown font-semibold"><br/>Sobota:</span><span className="font-semibold"> 9:00 - 15:00</span></p>        
+            </div>
         </div>
     </>
     );
