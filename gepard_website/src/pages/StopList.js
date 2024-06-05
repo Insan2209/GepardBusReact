@@ -38,7 +38,10 @@ function StopList() {
                 </p>
                 {stops.map((stop, index) => (
                     <div key={index} className="text-md md:text-xl text-zinc-700 font-poppins text-left">
-                        <Link to={`/RouteList/${routeId}/StopList/${index + 1}`}>
+                        <Link 
+                            to={`/RouteList/${routeId}/StopList/${index + 1}`} 
+                            state={{ stopName: stop }}
+                        >
                             <span className="text-cocoa_brown">{index + 1}.</span> {stop}
                         </Link>
                     </div>

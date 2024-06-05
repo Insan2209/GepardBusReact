@@ -18,22 +18,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
-      <div class="flex flex-col min-h-screen">
-        <Header />
-          <Routes>
-            <Route path="/" element={ <MainPage />}></Route>
-            <Route path="/AboutUs" element={ <AboutUs />}></Route>
-            <Route exact path="/RouteList" element={ <RouteList />}></Route>
-            <Route exact path="/RouteList/:routeId" element={ <StopList/>}></Route>
-            <Route exact path="/RouteList/:routeId/stops/:stopId" element={ <Schedule/>}></Route>
-            <Route path="/OurCrew" element={ <OurCrew />}></Route>
-            <Route path="/News" element={ <News />}></Route>
-            <Route path="/Contact" element={ <Contact />}></Route>
-            <Route path="/TermsAndConditions" element={ <TermsAndConditions />}></Route>
-          </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>,
+        <div className="flex flex-col min-h-screen">
+            <Header />
+            <Routes>
+                <Route path="/" element={<MainPage />} />
+                <Route path="/AboutUs" element={<AboutUs />} />
+                <Route path="/RouteList" element={<RouteList />} />
+                <Route path="/RouteList/:routeId" element={<StopList />} />
+                <Route path="/RouteList/:routeId/StopList/:stopId" element={<Schedule />} />
+                <Route path="/OurCrew" element={<OurCrew />} />
+                <Route path="/News" element={<News />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+            </Routes>
+            <Footer />
+        </div>
+    </BrowserRouter>
 );
+
 
 reportWebVitals();
