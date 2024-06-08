@@ -32,20 +32,22 @@ function StopList() {
 
     return (
         <div className="flex flex-wrap justify-center my-12">
-            <div className="w-full xl:w-1/2 block space-y-3 text-center justify-center">
-                <p className="text-4xl md:text-6xl font-bold text-zinc-700 font-poppins mb-16 xl:mb-24">
+            <div className="w-full xl:w-1/2 block text-center justify-center">
+                <p className="text-4xl md:text-6xl font-bold text-zinc-700 font-poppins mb-16 xl:mb-20">
                     Wybierz przystanek:
                 </p>
-                {stops.map((stop, index) => (
-                    <div key={index} className="text-md md:text-xl text-zinc-700 font-poppins text-left">
-                        <Link 
-                            to={`/RouteList/${routeId}/StopList/${index + 1}`} 
-                            state={{ stopName: stop }}
-                        >
-                            <span className="text-cocoa_brown">{index + 1}.</span> {stop}
-                        </Link>
-                    </div>
-                ))}
+                <div className="space-y-3">
+                    {stops.map((stop, index) => (
+                        <div key={index} className="text-md md:text-xl text-zinc-700 font-poppins text-left transition ease-in-out duration-300 hover:text-princeton_orange">
+                            <Link 
+                                to={`/RouteList/${routeId}/StopList/${index + 1}`} 
+                                state={{ stopName: stop }}
+                            >
+                                <span className="text-cocoa_brown">{index + 1}.</span> {stop}
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
