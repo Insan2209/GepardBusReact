@@ -6,7 +6,7 @@ const timetableData = {
         kierunek: 'Częstochowa',
         przez: 'Działoszyn, Zawady, Miedźno, Biała, Więcki',
         godziny: {
-            1: ['5:00 Dmq', '6:10 Dmq', '6:50 Dmq'],
+            1: ['5:00 MQ', '6:10 MQ', '6:50 MQS', '8:05 MQ' ,'9:10 MQS' , '10:40 MQ' ,'11:50 T' , '13:25 LMQ' ,'14:15 MQS' , '14:50 MQ' ,'15:50 MQ' , '17:25 MQ' ,'20:30 MQ'],
             2: ['8:00', '12:00', '16:00'],
         },
     },
@@ -55,9 +55,10 @@ function Schedule() {
                     Kierunek: <span className="text-cocoa_brown">{kierunek}</span>, przez {przez}
                 </p>
                 <div className="flex flex-wrap space-x-5">
+                    <p className="text-md md:text-xl font-semibold text-zinc-700 font-poppins ml-5">Od poniedziałku do piątku (oprócz świąt):</p>
                     {times.length > 0 ? (
                         times.map((time, index) => (
-                            <div key={index} className="text-md md:text-xl text-zinc-700 font-poppins text-left">
+                            <div key={index} className="text-md md:text-xl text-zinc-700 font-poppins">
                                 {time}
                             </div>
                         ))
