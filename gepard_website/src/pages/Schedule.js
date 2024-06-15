@@ -16,9 +16,12 @@ function Schedule() {
 
     const fetchSchedule = (date) => {
         const formattedDate = date.toISOString().split('T')[0];
-        fetch(`/schedule/${formattedDate}`)
+        fetch(`http://localhost:3001/schedule/${formattedDate}`)
             .then(response => response.json())
-            .then(data => setSchedule(data))
+            .then(data => {
+                console.log('Fetched schedule data:', data); // Dodaj ten log
+                setSchedule(data);
+            })
             .catch(error => console.error('Error fetching schedule:', error));
     };
 

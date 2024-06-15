@@ -1,11 +1,13 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
+const cors = require('cors');
 const PORT = 3001;
 
 const db = new sqlite3.Database('./mydatabase.db');
 
 app.use(express.json());
+app.use(cors());
 
 // Sprawdza, czy dzień jest świętem lub specjalnym dniem
 const isSpecialDay = (date, exceptDates) => {
@@ -13,18 +15,23 @@ const isSpecialDay = (date, exceptDates) => {
     return exceptDates.includes(formattedDate);
 };
 
-// Sprawdza, czy dzień jest w określonym okresie
 const isInPeriod = (date, periods) => {
     const formattedDate = date.toISOString().split('T')[0];
-    if (!Array.isArray(periods)) {
-        throw new Error('Periods is not an array');
-    }
-    for (let period of periods) {
-        if (formattedDate >= period.start && formattedDate <= period.end) {
-            return true;
+    try {
+        if (!periods || typeof periods !== 'object') {
+            throw new Error('Periods format is invalid');
         }
+        const summerHolidays = periods.summer_holidays || [];
+        for (let period of summerHolidays) {
+            if (formattedDate >= period.start && formattedDate <= period.end) {
+                return true;
+            }
+        }
+        return false;
+    } catch (error) {
+        console.error('Error in isInPeriod:', error);
+        return false;
     }
-    return false;
 };
 
 // Pobiera harmonogram dla danej daty
