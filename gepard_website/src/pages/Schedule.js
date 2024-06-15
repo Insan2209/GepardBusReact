@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker.css';
@@ -7,8 +7,20 @@ import 'react-calendar/dist/Calendar.css';
 function Schedule() {
     const location = useLocation();
     const { stopName } = location.state || {};
-
     const [value, onChange] = useState(new Date());
+    const [schedule, setSchedule] = useState([]);
+
+    useEffect(() => {
+        fetchSchedule(value);
+    }, [value]);
+
+    const fetchSchedule = (date) => {
+        const formattedDate = date.toISOString().split('T')[0];
+        fetch(`/schedule/${formattedDate}`)
+            .then(response => response.json())
+            .then(data => setSchedule(data))
+            .catch(error => console.error('Error fetching schedule:', error));
+    };
 
     const formatDate = (date) => {
         return date.toLocaleDateString('pl-PL', {
@@ -25,15 +37,22 @@ function Schedule() {
                     Przystanek: <span className="text-cocoa_brown">{stopName}</span>
                 </p>
                 <p className="text-xl md:text-2xl font-semibold text-zinc-700 font-poppins mb-6">
-                    Kierunek: <span className="text-cocoa_brown">Częstochowa</span> przez Działoszyn, Zawady, Miedźno, Biała, Więcki
+                    Wszystkie kursy w dniu: <span>{formatDate(value)}</span>
                 </p>
                 <div className="flex flex-wrap justify-between w-3/4 m-auto">
                     <p>
-                        Wszystkie kursy w dniu: <span>{formatDate(value)}</span>
+                        <DatePicker onChange={onChange} value={value} clearIcon={null}/>
                     </p>
-                    <p>
-                        Zmień datę: <DatePicker onChange={onChange} value={value} clearIcon={null}/>
-                    </p>
+                </div>
+                <div className="mt-4">
+                    {schedule.map((entry, index) => (
+                        <div key={index} className="mb-2">
+                            <p>Trasa: {entry.route}</p>
+                            <p>Przystanek: {entry.stop}</p>
+                            <p>Godzina odjazdu: {entry.departure_time}</p>
+                            <p>Kod harmonogramu: {entry.schedule_code}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
