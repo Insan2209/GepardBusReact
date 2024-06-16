@@ -1,0 +1,5 @@
+1. Zmiana sciezki z localhost:3001
+2. Wyswietlanie tylko godzin
+3. Wyswietlanie przy pierwszym zaladowaniu strony
+4. dark mode
+5. animacje

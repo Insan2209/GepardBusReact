@@ -3,10 +3,14 @@ import { Link, useParams } from 'react-router-dom';
 
 const stopsData = {
     'pajeczno-czestochowa': [
-        'Pajęczno Plac Targowy', 'Pajęczno ul. Wieluńska', 'Pajęczno ul. Częstochowska', 
-        'Dylów Rządowy', 'Trębaczew (Kościół)', 'Posmykowizna', 'Działoszyn ul. Piłsudskiego (osiedle)',
-        'Działoszyn Plac Wolności', 'Raciszyn', 'Smolarze', 'Dębie', 'Popów (Kościół)', 'Zawady', 
-        'Izbiska Duże', 'Miedźno', 'Kołaczkowice', 'Łobodno', 'Kamyk', 'Biała', 'Makowiska', 
+        'Pajęczno Plac Targowy', 'Pajęczno ul. Wieluńska', 'Dylów Rządowy', 'Trębaczew (Kościół)', 'Posmykowizna', 
+        'Działoszyn ul. Piłsudskiego (osiedle)', 'Działoszyn Plac Wolności', 'Raciszyn', 'Smolarze', 'Dębie', 'Popów (Kościół)', 
+        'Zawady', 'Izbiska Duże', 'Miedźno', 'Kołaczkowice', 'Łobodno', 'Kamyk', 'Biała', 'Częstochowa- Real', 
+        'Częstochowa- Promenada Niemena', 'Częstochowa- Hala Polonia', 'Częstochowa II Aleja NMP', 'Częstochowa ul. Orzechowskiego'
+    ],
+    'pajeczno-czestochowa2': [
+        'Pajęczno Plac Targowy', 'Pajęczno ul. Częstochowska', 'Smolarze', 'Dębie', 'Popów (Kościół)', 
+        'Zawady', 'Izbiska Duże', 'Miedźno', 'Kołaczkowice', 'Łobodno', 'Kamyk', 'Biała', 'Makowiska', 
         'Nowe Gajęcice', 'Patrzyków', 'Wąsosz Górny Rynek', 'Wąsosz Dolny Sołtys', 'Marianów', 
         'Annolesie', 'Więcki Szkoła', 'Dąbrowa', 'Częstochowa- Real', 'Częstochowa- Promenada Niemena', 
         'Częstochowa- Hala Polonia', 'Częstochowa II Aleja NMP', 'Częstochowa ul. Orzechowskiego'
