@@ -19,10 +19,9 @@ function Schedule() {
         fetch(`http://localhost:3001/schedule/${formattedDate}`)
             .then(response => response.json())
             .then(data => {
-                console.log('Fetched schedule data:', data); // Dodaj ten log
                 setSchedule(data);
             })
-            .catch(error => console.error('Error fetching schedule:', error));
+            .catch(error => console.error('Problem przy pobieraniu rozkładu:', error));
     };
 
     const formatDate = (date) => {
