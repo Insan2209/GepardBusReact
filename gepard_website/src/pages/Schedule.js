@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
+import moment from 'moment-timezone';
 
 function Schedule() {
     const location = useLocation();
@@ -15,7 +16,7 @@ function Schedule() {
     }, [value]);
 
     const fetchSchedule = (date) => {
-        const formattedDate = date.toISOString().split('T')[0];
+        const formattedDate = moment(date).format('YYYY-MM-DD');
         fetch(`http://localhost:3001/schedule/${formattedDate}`)
             .then(response => response.json())
             .then(data => {

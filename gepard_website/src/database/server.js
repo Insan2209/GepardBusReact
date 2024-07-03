@@ -1,10 +1,12 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
+const moment = require('moment-timezone');
 const app = express();
 const cors = require('cors');
 const PORT = 3001;
 
 const db = new sqlite3.Database('./mydatabase.db');
+moment.tz.setDefault('Europe/Warsaw');
 
 app.use(express.json());
 app.use(cors());
