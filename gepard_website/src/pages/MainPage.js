@@ -3,7 +3,7 @@ import React from "react";
 function MainPage() {
   return (
     <>
-      <div className="flex flex-wrap items-center justify-between my-12 xl:my-auto">
+      <div className="flex flex-wrap items-center justify-between my-12 xl:my-auto py-5">
         <div className="w-full xl:w-1/2">
           <div className="items-center justify-between mx-4 xl:ml-24">
             <p className="text-3xl xl:text-6xl font-bold text-zinc-700 font-poppins">

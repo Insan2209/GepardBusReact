@@ -1,23 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import moment from 'moment-timezone';
 
 function Schedule() {
-    const location = useLocation();
-    const { stopName } = location.state || {};
+    const { routeId, stopId } = useParams();
     const [value, onChange] = useState(new Date());
     const [schedule, setSchedule] = useState([]);
+    const [stopName, setStopName] = useState('');
 
     useEffect(() => {
-        fetchSchedule(value);
-    }, [value]);
+        if (routeId && stopId) {
+            fetchSchedule(value, routeId, stopId);
+        }
+    }, [value, routeId, stopId]);
 
-    const fetchSchedule = (date) => {
+    const fetchSchedule = (date, routeId, stopId) => {
+        switch(routeId) {
+            case 'pajeczno-czestochowa':
+                routeId = 1;
+              break;
+            case 'pajeczno-czestochowa2':
+                routeId = 2;
+              break;
+              case 'popow-klobuck':
+                routeId = 3;
+              break;
+            case 'popow-wiecki':
+                routeId = 4;
+              break;
+          }
         const formattedDate = moment(date).format('YYYY-MM-DD');
-        fetch(`http://localhost:3001/schedule/${formattedDate}`)
+        fetch(`http://localhost:3001/schedule/${formattedDate}?stop_id=${stopId}&route_id=${routeId}`)
             .then(response => response.json())
             .then(data => {
                 setSchedule(data);
@@ -43,17 +59,12 @@ function Schedule() {
                     Wszystkie kursy w dniu: <span>{formatDate(value)}</span>
                 </p>
                 <div className="flex flex-wrap justify-between w-3/4 m-auto">
-                    <p>
-                        <DatePicker onChange={onChange} value={value} clearIcon={null}/>
-                    </p>
+                    <DatePicker onChange={onChange} value={value} clearIcon={null}/>
                 </div>
                 <div className="mt-4">
                     {schedule.map((entry, index) => (
                         <div key={index} className="mb-2">
-                            <p>Trasa: {entry.route}</p>
-                            <p>Przystanek: {entry.stop}</p>
-                            <p>Godzina odjazdu: {entry.departure_time}</p>
-                            <p>Kod harmonogramu: {entry.schedule_code}</p>
+                             {entry.departure_time}
                         </div>
                     ))}
                 </div>

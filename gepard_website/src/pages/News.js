@@ -69,7 +69,7 @@ function News () {
                             </button>
                             </div>
                         </div>
-                        <hr class="h-px w-full my-2 bg-selective_yellow border-0 block"></hr>
+                        <hr className="h-px w-full my-2 bg-selective_yellow border-0 block"></hr>
                     </div>
 
                     <AnimatePresence>
@@ -123,7 +123,7 @@ function News () {
                             </button>
                             </div>
                         </div>
-                        <hr class="h-px w-full my-2 bg-selective_yellow border-0 block"></hr>
+                        <hr className="h-px w-full my-2 bg-selective_yellow border-0 block"></hr>
                     </div>
                     <AnimatePresence>
                         {expandedButtonId === 2 && (
@@ -167,7 +167,7 @@ function News () {
                             </button>
                             </div>
                         </div>
-                        <hr class="h-px w-full my-2 bg-selective_yellow border-0 block"></hr>
+                        <hr className="h-px w-full my-2 bg-selective_yellow border-0 block"></hr>
                     </div>
                     <AnimatePresence>
                         {expandedButtonId === 3 && (
