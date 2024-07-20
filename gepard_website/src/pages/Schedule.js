@@ -6,10 +6,11 @@ import 'react-calendar/dist/Calendar.css';
 import moment from 'moment-timezone';
 
 function Schedule() {
+    const location = useLocation();
+    const { stopName } = location.state || {};
     const { routeId, stopId } = useParams();
     const [value, onChange] = useState(new Date());
     const [schedule, setSchedule] = useState([]);
-    const [stopName, setStopName] = useState('');
 
     useEffect(() => {
         if (routeId && stopId) {

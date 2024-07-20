@@ -19,30 +19,26 @@ const isSpecialDay = (date, exceptDates) => {
 
 const isInPeriod = (date, periods) => {
     const formattedDate = date.toISOString().split('T')[0];
-    const dayOfWeek = date.toLocaleString('en-US', { weekday: 'Saturday' });
-
     try {
-        const periodsObject = JSON.parse(periods);
-        const summerHolidays = periodsObject.summer_holidays || {};
-
-        // Sprawdź, czy obecny dzień tygodnia jest jednym z dni, które należy uwzględnić
-        if (summerHolidays[dayOfWeek]) {
-            const holidayPeriod = summerHolidays[dayOfWeek];
-            const startDate = new Date(holidayPeriod.start);
-            const endDate = new Date(holidayPeriod.end);
-            const currentDate = new Date(formattedDate);
-
-            // Sprawdź, czy data znajduje się w zakresie wakacji
-            return currentDate >= startDate && currentDate <= endDate;
+        if (!periods || typeof periods !== 'string') {
+            throw new Error('Periods format is invalid');
         }
-
+        const periodsObject = JSON.parse(periods);
+        const summerHolidays = periodsObject.summer_holidays || [];
+        if (!Array.isArray(summerHolidays)) {
+            throw new Error('Summer Holidays should be an array');
+        }
+        for (let period of summerHolidays) {
+            if (formattedDate >= period.start && formattedDate <= period.end) {
+                return true;
+            }
+        }
         return false;
     } catch (error) {
         console.error('Error in isInPeriod:', error);
         return false;
     }
 };
-
 
 // Pobiera harmonogram dla danej daty
 app.get('/schedule/:date', (req, res) => {
