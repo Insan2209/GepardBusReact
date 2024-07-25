@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 
 const stopsData = {
     'pajeczno-czestochowa': [
@@ -31,6 +31,8 @@ const stopsData = {
 };
 
 function StopList() {
+    const location = useLocation();
+    const { routeName, routeDescription } = location.state || {};
     const { routeId } = useParams();
     const stops = stopsData[routeId] || [];
 
@@ -42,10 +44,10 @@ function StopList() {
                 </p>
                 <div className="space-y-3">
                     {stops.map((stop, index) => (
-                        <div key={index} className="text-md md:text-xl text-zinc-700 font-poppins text-left transition ease-in-out duration-300 hover:text-princeton_orange">
+                        <div key={index} className="text-md md:text-xl text-zinc-700 font-poppins text-left transition ease-in-out duration-300 hover:text-princeton_orange px-3">
                             <Link 
                                 to={`/RouteList/${routeId}/StopList/${index + 1}`} 
-                                state={{ stopName: stop }}
+                                state={{ stopName: stop, routeName, routeDescription }}
                             >
                                 <span className="text-cocoa_brown">{index + 1}.</span> {stop}
                             </Link>

@@ -19,7 +19,7 @@ function RouteList () {
                 <div className="space-y-12">
                 {routes.map(route => (
                     <div key={route.id} className="text-2xl md:text-4xl font-bold text-zinc-700 font-poppins">
-                        <Link to={`/RouteList/${route.id}`} className="transition ease-in-out duration-300 hover:text-tawny">
+                        <Link to={`/RouteList/${route.id}`} className="transition ease-in-out duration-300 hover:text-tawny" state={{ routeName: route.name, routeDescription: route.description }}>
                             {route.name} <br />
                         </Link>
                         <span className="text-sm md:text-xl font-semibold text-cocoa_brown">
