@@ -18,7 +18,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-zinc-200 dark:bg-neutral-800">
             <Header />
             <Routes>
                 <Route path="/" element={<MainPage />} />

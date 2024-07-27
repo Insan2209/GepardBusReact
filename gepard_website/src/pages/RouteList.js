@@ -13,12 +13,12 @@ function RouteList () {
     <>
         <div className="flex flex-wrap justify-center my-12 md:my-24 min-h-[85vw] xl:min-h-[25vw]">
             <div className="w-full xl:w-1/2 block space-y-10 text-center justify-center">
-                <p className="text-4xl md:text-6xl font-bold text-zinc-700 font-poppins mb-16 xl:mb-24">
+                <p className="text-4xl md:text-6xl font-bold text-zinc-700 dark:text-zinc-300 font-poppins mb-16 xl:mb-24">
                     Wybierz trasę:
                 </p>
                 <div className="space-y-12">
                 {routes.map(route => (
-                    <div key={route.id} className="text-2xl md:text-4xl font-bold text-zinc-700 font-poppins">
+                    <div key={route.id} className="text-2xl md:text-4xl font-bold text-zinc-700 dark:text-zinc-300 font-poppins">
                         <Link to={`/RouteList/${route.id}`} className="transition ease-in-out duration-300 hover:text-tawny" state={{ routeName: route.name, routeDescription: route.description }}>
                             {route.name} <br />
                         </Link>

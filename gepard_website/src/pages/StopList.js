@@ -39,12 +39,12 @@ function StopList() {
     return (
         <div className="flex flex-wrap justify-center my-12">
             <div className="w-full xl:w-1/2 block text-center justify-center">
-                <p className="text-4xl md:text-6xl font-bold text-zinc-700 font-poppins mb-16 xl:mb-20">
+                <p className="text-4xl md:text-6xl font-bold text-zinc-700 dark:text-zinc-300 font-poppins mb-16 xl:mb-20">
                     Wybierz przystanek:
                 </p>
                 <div className="space-y-3">
                     {stops.map((stop, index) => (
-                        <div key={index} className="text-md md:text-xl text-zinc-700 font-poppins text-left transition ease-in-out duration-300 hover:text-princeton_orange px-3">
+                        <div key={index} className="text-md md:text-xl text-zinc-700 dark:text-zinc-300 font-poppins text-left transition ease-in-out duration-300 hover:text-princeton_orange px-3">
                             <Link 
                                 to={`/RouteList/${routeId}/StopList/${index + 1}`} 
                                 state={{ stopName: stop, routeName, routeDescription }}

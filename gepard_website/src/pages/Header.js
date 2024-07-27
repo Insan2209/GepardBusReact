@@ -24,19 +24,28 @@ function Header() {
 
     return (
         <>
-            <nav className="bg-slate-50">
+            <nav className="bg-slate-50 dark:bg-gradient-to-b dark:from-neutral-950 dark:to-neutral-800">
                 <div className="flex flex-wrap items-center justify-between mx-auto p-2 xl:justify-center 2xl:justify-between">
-                    <Link to ="/">
-                    <img
-                    src="/png/gepard_logo.png"
-                    className="h-24"
-                    alt="Gepard Bus Logo"
-                    />
-                    </Link>
+                    <div>
+                        <Link to ="/">
+                        <img
+                        src="/png/gepard_logo.png"
+                        className="h-24 block dark:hidden"
+                        alt="Gepard Bus Logo"
+                        />
+                        </Link>
+                        <Link to ="/">
+                        <img
+                        src="/png/gepard_logo2.png"
+                        className="h-24 hidden dark:block"
+                        alt="Gepard Bus Logo"
+                        />
+                        </Link>
+                    </div>
                     <button
                         id="toggleBtn"
                         onClick={handleToggleMenu}
-                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-20"
+                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-gray-500 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-20 xl:hidden"
                         aria-controls="navbar-default"
                         aria-expanded="false"
                     >
@@ -62,7 +71,7 @@ function Header() {
                             <li className="flex items-center">
                                 <Link
                                 to ="/AboutUs"
-                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
+                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto rounded text-gray-900 dark:text-zinc-300 hover:bg-gray-300 dark:hover:bg-zinc-700 xl:hover:bg-transparent dark:xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                                 >
                                 <img
                                     src="/png/ofirmie_pomaranczowe.png"
@@ -75,7 +84,7 @@ function Header() {
                             <li className="flex items-center">
                                 <Link
                                 to ="/RouteList"
-                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
+                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto rounded text-gray-900 dark:text-zinc-300 hover:bg-gray-300 dark:hover:bg-zinc-700 xl:hover:bg-transparent dark:xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                                 >
                                 <img
                                     src="/png/rozklad_pomaranczowe.png"
@@ -88,7 +97,7 @@ function Header() {
                             <li className="flex items-center">
                                 <Link
                                 to ="/OurCrew" 
-                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
+                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto rounded text-gray-900 dark:text-zinc-300 hover:bg-gray-300 dark:hover:bg-zinc-700 xl:hover:bg-transparent dark:xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                                 >
                                 <img
                                     src="/png/zaloga_pomaranczowe.png"
@@ -101,7 +110,7 @@ function Header() {
                             <li className="flex items-center">
                                 <Link
                                 to ="/News"
-                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
+                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto rounded text-gray-900 dark:text-zinc-300 hover:bg-gray-300 dark:hover:bg-zinc-700 xl:hover:bg-transparent dark:xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                                 >
                                 <img
                                     src="/png/aktualnosci_pomaranczowe.png"
@@ -114,7 +123,7 @@ function Header() {
                             <li className="flex items-center">
                                 <Link
                                 to ="/Contact"
-                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
+                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto rounded text-gray-900 dark:text-zinc-300 hover:bg-gray-300 dark:hover:bg-zinc-700 xl:hover:bg-transparent dark:xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                                 >
                                 <img
                                     src="/png/kontakt_pomaranczowe.png"
@@ -127,7 +136,7 @@ function Header() {
                             <li className="flex items-center">
                                 <Link
                                 to ="/TermsAndConditions"
-                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto text-gray-900 rounded hover:bg-gray-300 xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
+                                className="flex items-center py-2 px-2 xl:px-3 w-full xl:w-auto rounded text-gray-900 dark:text-zinc-300 hover:bg-gray-300 dark:hover:bg-zinc-700 xl:hover:bg-transparent dark:xl:hover:bg-transparent xl:border-0 xl:hover:text-princeton_orange"
                                 >
                                 <img
                                     src="/png/regulamin_pomaranczowe.png"
