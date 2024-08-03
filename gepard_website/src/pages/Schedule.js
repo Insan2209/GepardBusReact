@@ -11,6 +11,8 @@ function Schedule() {
     const { routeId, stopId } = useParams();
     const [value, onChange] = useState(new Date());
     const [schedule, setSchedule] = useState([]);
+    const [direction1, setdirection1] = useState("");
+    const [direction2, setdirection2] = useState("");
 
     useEffect(() => {
         if (routeId && stopId) {
@@ -22,15 +24,23 @@ function Schedule() {
         switch(routeId) {
             case 'pajeczno-czestochowa':
                 routeId = 1;
+                setdirection1("Pajęczno");
+                setdirection2("Częstochowa");
               break;
             case 'pajeczno-czestochowa2':
                 routeId = 2;
+                setdirection1("Pajęczno");
+                setdirection2("Częstochowa");
               break;
               case 'popow-klobuck':
                 routeId = 3;
+                setdirection1("Popów");
+                setdirection2("Kłobuck");
               break;
             case 'popow-wiecki':
                 routeId = 4;
+                setdirection1("Popów");
+                setdirection2("Więcki");
               break;
             default:
                 routeId = 0;
@@ -69,6 +79,15 @@ function Schedule() {
                         <span className="text-md md:text-lg text-zinc-700 dark:text-zinc-300 font-poppins">Zmień datę:</span> <DatePicker onChange={onChange} value={value} clearIcon={null} className="text-zinc-700 dark:text-zinc-300 "/>
                     </div>
                 </div>
+                <p className="text-lg text-zinc-700 dark:text-zinc-300 font-poppins pt-8 md:text-2xl">Kierunek: {direction1}</p>
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 text-lg text-zinc-700 dark:text-zinc-300 font-poppins mx-3 p-3 rounded-3xl border-2 border-zinc-300 md:text-xl md:w-4/5 md:mx-auto">
+                    {schedule.map((entry, index) => (
+                        <div key={index} className="">
+                             {entry.departure_time}
+                        </div>
+                    ))}
+                </div>
+                <p className="text-lg text-zinc-700 dark:text-zinc-300 font-poppins pt-8 md:text-2xl">Kierunek: {direction2}</p>
                 <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 text-lg text-zinc-700 dark:text-zinc-300 font-poppins mx-3 p-3 rounded-3xl border-2 border-zinc-300 md:text-xl md:w-4/5 md:mx-auto">
                     {schedule.map((entry, index) => (
                         <div key={index} className="">

@@ -1,16 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion"
 
 function AboutUs () {
     return (
     <>
         <div className="flex flex-wrap items-center justify-between my-12 xl:my-auto xl:py-20">
-            <div className="hidden w-full xl:w-1/2 md:flex items-center justify-center">
+            <motion.div className="hidden w-full xl:w-1/2 md:flex items-center justify-center" animate={{ opacity: 1 }} initial = {{ opacity: 0 }} transition={{ duration: 2, delay: 0.6 }}>
                 <div>
                     <img src="/png/bus.png" className="h-full block dark:hidden" alt="bus" />
                     <img src="/png/bus3.png" className="h-full hidden dark:block" alt="bus" />
                 </div>
-            </div>
-            <div className="w-full xl:w-1/2">
+            </motion.div>
+            <motion.div className="w-full xl:w-1/2" animate={{ opacity: 1 }} initial = {{ opacity: 0 }} transition={{ duration: 2 }}>
                 <div className="items-center justify-between mx-4 xl:mr-24">
                 <p className="text-4xl xl:text-4xl font-bold text-zinc-700 dark:text-zinc-300 font-poppins">
                     Dlaczego warto wybrać <span className="text-cocoa_brown">geparda?</span>
@@ -45,7 +46,7 @@ function AboutUs () {
                     któremu możesz podzielić się z nami swoją opinią!
                 </p>
                 </div>
-            </div>
+            </motion.div>
         </div>
     </>
     );
