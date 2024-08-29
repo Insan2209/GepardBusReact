@@ -48,6 +48,10 @@ const isInPeriod = (date, periods) => {
     }
 };
 
+app.get('/', (req, res) => {
+    res.send('Hello from backend');
+  });
+
 app.get('/schedule/:date', (req, res) => {
     const date = new Date(req.params.date);
     const dayOfWeek = date.toLocaleString('en-US', { weekday: 'long' });
