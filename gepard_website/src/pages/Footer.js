@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
     return (
     <>
-        <div className="flex flex-wrap flex-col md:flex-row md:mt-auto items-center justify-between w-full bg-xanthous dark:bg-gradient-to-t dark:from-neutral-950 dark:to-neutral-800">
+        <div className="flex flex-wrap flex-col md:flex-row md:mt-auto items-center justify-between w-full bg-xanthous bg-opacity-75 dark:bg-[#0C0C0C]">
             <div className="flex justify-center items-center w-full">
                 <div>
                     <img src="/png/gepard_logo.png" alt="Gepard bus logo" className="block dark:hidden" />

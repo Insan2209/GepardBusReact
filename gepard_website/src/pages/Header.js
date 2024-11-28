@@ -24,7 +24,7 @@ function Header() {
 
     return (
         <>
-            <nav className="bg-slate-50 dark:bg-gradient-to-b dark:from-neutral-950 dark:to-neutral-800">
+            <nav className="bg-xanthous bg-opacity-75 dark:bg-[#0C0C0C]">
                 <div className="flex flex-wrap items-center justify-between mx-auto p-2 xl:justify-center 2xl:justify-between">
                     <div>
                         <Link to ="/">

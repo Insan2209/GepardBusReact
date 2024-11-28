@@ -12,13 +12,12 @@ import Contact from "./pages/Contact.js";
 import TermsAndConditions from "./pages/TermsAndConditions.js";
 import Header from "./pages/Header.js";
 import Footer from "./pages/Footer.js";
-import reportWebVitals from "./reportWebVitals.js";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
-        <div className="flex flex-col min-h-screen bg-zinc-200 dark:bg-neutral-800">
+        <div className="flex flex-col min-h-screen bg-zinc-200 dark:bg-[#101010]">
             <Header />
             <Routes>
                 <Route path="/" element={<MainPage />} />
@@ -36,5 +35,3 @@ root.render(
     </BrowserRouter>
 );
 
-
-reportWebVitals();

@@ -1,11 +1,41 @@
 import React from "react";
 import { motion } from "framer-motion"
+import { useMediaQuery } from '@mui/material';
 
 function MainPage() {
+
+  const isSmall = useMediaQuery("(max-width:1279px)");
+
+  const variants = isSmall ?
+  {
+      Animate: 
+      {
+          opacity: 100,
+      },
+      InitialAndExit:
+      {
+          opacity: 0,
+      }
+  }
+  :
+  {
+      Animate: 
+      {
+          opacity: 100,
+          x: 0,
+      },
+      InitialAndExit:
+      {
+          opacity: 0,
+          x: -50,
+      }
+  };
+
+
   return (
     <>
       <div className="flex flex-wrap items-center justify-between my-12 xl:my-auto py-5">
-        <motion.div className="w-full xl:w-1/2" animate={{ opacity: 1, x: 0 }} initial = {{ opacity: 0, x: -50 }} transition={{ duration: 2 }}>
+        <motion.div className="w-full xl:w-1/2" variants={variants} initial={variants.InitialAndExit} animate={variants.Animate} exit={variants.InitialAndExit} transition={{ duration: 1 }}>
           <div className="items-center justify-between mx-4 xl:ml-24">
             <p className="text-3xl xl:text-6xl font-bold text-zinc-700 dark:text-zinc-300 font-poppins">
               Gepard: Szybko, Pewnie, Wygodnie -{" "}
@@ -39,7 +69,7 @@ function MainPage() {
             </div>
           </div>
         </motion.div>
-        <motion.div className=" hidden xl:flex w-full xl:w-1/2 items-center justify-center" animate={{ opacity: 1 }} initial = {{ opacity: 0 }} transition={{ duration: 2, delay: 0.6 }}>
+        <motion.div className=" hidden xl:flex w-full xl:w-1/2 items-center justify-center" variants={variants} initial={variants.InitialAndExit} animate={variants.Animate} exit={variants.InitialAndExit} transition={{ duration: 1, delay: 0.6 }}>
           <div>
             <img src="/png/bus.png" className="h-full block dark:hidden" alt="bus" />
             <img src="/png/bus3.png" className="h-full hidden dark:block" alt="bus" />
