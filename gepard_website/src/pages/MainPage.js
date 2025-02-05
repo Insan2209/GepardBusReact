@@ -71,8 +71,8 @@ function MainPage() {
         </motion.div>
         <motion.div className=" hidden xl:flex w-full xl:w-1/2 items-center justify-center" variants={variants} initial={variants.InitialAndExit} animate={variants.Animate} exit={variants.InitialAndExit} transition={{ duration: 1, delay: 0.6 }}>
           <div>
-            <img src="/png/bus.png" className="h-full block dark:hidden" alt="bus" />
-            <img src="/png/bus3.png" className="h-full hidden dark:block" alt="bus" />
+            <img src="/png/bus1.png" className="h-full block dark:hidden" alt="bus" />
+            <img src="/png/bus2.png" className="h-full hidden dark:block" alt="bus" />
           </div>
         </motion.div>
       </div>

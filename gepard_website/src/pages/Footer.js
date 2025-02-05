@@ -16,7 +16,7 @@ function Footer() {
             </p>
             <a href="https://www.google.com" target="_blank" rel="noreferrer">
                 <img
-                src="/png/facebook_pomaranczowe.png"
+                src="/png/Facebook.png"
                 className="w-10 h-10 ml-2"
                 alt="Facebook Logo"
                 />
@@ -28,7 +28,7 @@ function Footer() {
             </p>
             <a href="https://www.google.com" target="_blank" rel="noreferrer">
                 <img
-                src="/png/instagram_pomaranczowe.png"
+                src="/png/Instagram.png"
                 className="w-10 h-10 ml-2"
                 alt="Instagram Logo"
                 />

@@ -80,9 +80,11 @@ function Schedule() {
                     </div>
                 </div>
                 <p className="text-lg text-zinc-700 dark:text-zinc-300 font-poppins pt-8 md:text-2xl">Kierunek: {direction1}</p>
-                <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 text-lg text-zinc-700 dark:text-zinc-300 font-poppins mx-3 p-3 rounded-3xl border-2 border-zinc-300 md:text-xl md:w-4/5 md:mx-auto">
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 
+                text-lg text-zinc-700 dark:text-zinc-300 font-poppins mx-3 p-3 
+                rounded-3xl border-2 border-zinc-300 md:text-xl md:w-4/5 md:mx-auto">
                     {schedule.map((entry, index) => (
-                        <div key={index} className="">
+                        <div key={index}>
                              {entry.departure_time}
                         </div>
                     ))}
@@ -90,7 +92,7 @@ function Schedule() {
                 <p className="text-lg text-zinc-700 dark:text-zinc-300 font-poppins pt-8 md:text-2xl">Kierunek: {direction2}</p>
                 <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 text-lg text-zinc-700 dark:text-zinc-300 font-poppins mx-3 p-3 rounded-3xl border-2 border-zinc-300 md:text-xl md:w-4/5 md:mx-auto">
                     {schedule.map((entry, index) => (
-                        <div key={index} className="">
+                        <div key={index}>
                              {entry.departure_time}
                         </div>
                     ))}
